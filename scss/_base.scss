@@ -1,0 +1,24 @@
+// Colors
+$color-primary-green: #54e6af;
+$color-primary-background: #121725;
+$color-gray: #5a668a;
+$color-gray-dark: #2c344b;
+$color-gray-light: #c2cbe5;
+$color-white: #ffffff;
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Chivo", sans-serif;
+}
