@@ -23,6 +23,7 @@
   <body>
     <div class="container">
       <main class="main">
+        <img src="./assets/desktop/logo.svg" alt="Logo" class="main__logo" />
         <header class="header">
           <h1 class="header__headline">
             Publish your podcasts <span>everywhere.</span>
@@ -34,24 +35,26 @@
           </p>
         </header>
         <div class="partners">
-          <svg>
-            <use href="./assets/desktop/spotify.svg#icon-spotify"></use>
-          </svg>
-          <svg>
-            <use href="./assets/desktop/apple-podcast.svg#icon-apple"></use>
-          </svg>
-          <svg>
-            <use href="./assets/desktop/google-podcasts.svg#icon-google"></use>
-          </svg>
-          <svg>
-            <use href="./assets/desktop/pocket-casts.svg#icon-pocket"></use>
-          </svg>
+          <img
+            src="./assets/mobile/partners.svg"
+            alt="partners"
+            class="partners__img"
+          />
         </div>
         <div class="cta">
-          <input type="text" placeholder="Email address" class="cta__input" />
+          <div class="cta__input">
+            <input
+              type="text"
+              placeholder="Email address"
+              class="cta__input--input"
+            />
+            <p class="cta__input--error"></p>
+          </div>
           <button class="cta__btn">Request Access</button>
         </div>
       </main>
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
