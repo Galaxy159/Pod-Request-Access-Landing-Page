@@ -6,6 +6,19 @@ $color-gray-dark: #2c344b;
 $color-gray-light: #c2cbe5;
 $color-white: #ffffff;
 
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -21,7 +34,7 @@ html {
 
 body {
   font-family: "Chivo", sans-serif;
-  background-color: #f2f2f2;
+  background-color: $color-primary-background;
 }
 
 .container {
@@ -30,4 +43,12 @@ body {
   background: url(../assets/mobile/image-host.jpg) no-repeat;
   position: relative;
   z-index: 1;
+  padding-block: 6.2rem 9.3rem;
+
+  @include respond(tablet) {
+    max-width: 76.8rem;
+    background: url(../assets/desktop/bg-pattern-dots.svg) no-repeat;
+    background-position: bottom 0 left 3rem;
+    padding-block: 5rem 25.8rem;
+  }
 }

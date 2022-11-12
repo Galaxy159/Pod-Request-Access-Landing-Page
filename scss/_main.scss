@@ -3,9 +3,16 @@
 //****************//
 .main {
   max-width: 32.7rem;
-  padding: 6.2rem 0;
   margin: 0 auto;
   text-align: center;
+
+  @include respond(tablet) {
+    max-width: 76.8rem;
+    background: url(../assets/tablet/image-host.jpg) no-repeat;
+    background-position: top 0 right 0;
+    text-align: left;
+    margin-left: 3.9rem;
+  }
 
   &::after {
     content: "";
@@ -16,10 +23,24 @@
     position: absolute;
     background-color: rgba(18, 23, 37, 0.9);
     z-index: -1;
+
+    @include respond(tablet) {
+      display: none;
+    }
   }
 
   &__logo {
     margin-bottom: 5.7rem;
+
+    @include respond(tablet) {
+      margin-bottom: 15.2rem;
+    }
+  }
+
+  &__content {
+    background-color: $color-primary-background;
+    max-width: 63.5rem;
+    display: grid;
   }
 }
 
@@ -29,6 +50,10 @@
 
 .header {
   margin-bottom: 3.3rem;
+
+  @include respond(tablet) {
+    margin-block: 9.3rem 4rem;
+  }
   &__headline {
     font-weight: 300;
     font-size: 2.6rem;
@@ -40,12 +65,24 @@
     & span {
       color: $color-white;
     }
+
+    @include respond(tablet) {
+      font-size: 4.8rem;
+      line-height: 5.6rem;
+      margin-bottom: 3.1rem;
+    }
   }
   &__text {
     font-weight: 300;
     font-size: 1.5rem;
     line-height: 2.5rem;
     color: $color-gray-light;
+
+    @include respond(tablet) {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      max-width: 44.5rem;
+    }
   }
 }
 
@@ -56,8 +93,17 @@
 .partners {
   margin-bottom: 4.8rem;
 
+  @include respond(tablet) {
+    grid-row: 4 / 5;
+    margin-bottom: 0;
+  }
+
   & img {
     width: 100%;
+
+    @include respond(tablet) {
+      width: 84.41%;
+    }
   }
 }
 
@@ -66,8 +112,17 @@
 //***********************//
 
 .cta {
+  @include respond(tablet) {
+    margin-bottom: 4rem;
+    position: relative;
+    max-width: 42.7rem;
+  }
   &__input {
     margin-bottom: 0.8rem;
+
+    @include respond(tablet) {
+      margin: 0;
+    }
     &--input {
       padding: 0.9rem 3.2rem;
       width: 100%;
@@ -80,6 +135,10 @@
       font-weight: 300;
       outline: none;
       margin-bottom: 0.8rem;
+
+      @include respond(tablet) {
+        padding: 1.4rem 3.2rem;
+      }
     }
     &--error {
       text-align: left;
@@ -88,11 +147,12 @@
       font-size: 1.2rem;
       line-height: 1.4rem;
       font-weight: 300;
+      height: 1.2rem;
     }
   }
   &__btn {
     font-size: 1.4rem;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 2.8rem;
     color: $color-primary-background;
     background-color: $color-primary-green;
@@ -100,5 +160,18 @@
     border-radius: 3rem;
     padding-block: 0.9rem;
     width: 100%;
+    cursor: url(../assets/Pointer.svg), auto;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #b3ffe2;
+    }
+
+    @include respond(tablet) {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      max-width: 16.2rem;
+    }
   }
 }
