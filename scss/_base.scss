@@ -51,4 +51,9 @@ body {
     background-position: bottom 0 left 3rem;
     padding-block: 0 25.8rem;
   }
+
+  @include respond(desktop) {
+    max-width: 144rem;
+    background: none;
+  }
 }

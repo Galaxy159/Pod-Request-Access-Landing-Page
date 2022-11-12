@@ -15,6 +15,16 @@
     padding-top: 5rem;
   }
 
+  @include respond(desktop) {
+    max-width: 127.6rem;
+    background: url(../assets/desktop/bg-pattern-dots.svg) no-repeat,
+      url(../assets/desktop/image-host.jpg) no-repeat;
+    background-position: top 71.8rem right 0, top 13rem right 0;
+    text-align: left;
+    margin-left: 3.9rem;
+    padding-block: 10.2rem;
+  }
+
   &::after {
     content: "";
     width: 100%;
@@ -36,6 +46,10 @@
     @include respond(tablet) {
       margin-bottom: 15.2rem;
     }
+
+    @include respond(desktop) {
+      margin-bottom: 10.3rem;
+    }
   }
 
   &__content {
@@ -43,6 +57,10 @@
       background-color: $color-primary-background;
       max-width: 63.5rem;
       display: grid;
+    }
+
+    @include respond(desktop) {
+      max-width: 72.4rem;
     }
   }
 }
