@@ -29,12 +29,12 @@ body {
     max-width: 76.8rem;
     background: url(../assets/desktop/bg-pattern-dots.svg) no-repeat;
     background-position: bottom 0 left 3rem;
-    padding-block: 5rem 25.8rem;
+    padding-block: 0 25.8rem;
   }
 }
 
 .main {
-  max-width: 32.7rem;
+  max-width: 87.2%;
   margin: 0 auto;
   text-align: center;
 }
@@ -45,6 +45,7 @@ body {
     background-position: top 0 right 0;
     text-align: left;
     margin-left: 3.9rem;
+    padding-top: 5rem;
   }
 }
 .main::after {
@@ -70,10 +71,12 @@ body {
     margin-bottom: 15.2rem;
   }
 }
-.main__content {
-  background-color: rgb(18, 23, 37);
-  max-width: 63.5rem;
-  display: grid;
+@media (min-width: 480px) {
+  .main__content {
+    background-color: rgb(18, 23, 37);
+    max-width: 63.5rem;
+    display: grid;
+  }
 }
 
 .header {

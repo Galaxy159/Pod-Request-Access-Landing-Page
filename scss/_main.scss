@@ -2,7 +2,7 @@
 // MAIN AND LOGO //
 //****************//
 .main {
-  max-width: 32.7rem;
+  max-width: 87.2%;
   margin: 0 auto;
   text-align: center;
 
@@ -12,6 +12,7 @@
     background-position: top 0 right 0;
     text-align: left;
     margin-left: 3.9rem;
+    padding-top: 5rem;
   }
 
   &::after {
@@ -38,9 +39,11 @@
   }
 
   &__content {
-    background-color: $color-primary-background;
-    max-width: 63.5rem;
-    display: grid;
+    @include respond(tablet) {
+      background-color: $color-primary-background;
+      max-width: 63.5rem;
+      display: grid;
+    }
   }
 }
 
